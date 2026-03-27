@@ -1,0 +1,43 @@
+/* App.css — COMPONENT/UI STYLES */
+
+/* Centers the grid content inside the container */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+
+  /* ⭐ This is the missing piece that fixes your layout */
+  justify-content: center;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e0dcd5;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+/* Fade-in animation */
+.card {
+  animation: fadeIn 0.9s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

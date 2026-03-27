@@ -1,0 +1,24 @@
+/* index.css — GLOBAL STYLES */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f5f2ec;
+  font-family: system-ui, sans-serif;
+  color: #333;
+
+  /* Center the entire React app */
+  display: flex;
+  justify-content: center;   /* horizontal centering */
+  align-items: center;       /* vertical centering */
+  min-height: 100vh;         /* ensures full viewport height */
+}
+
+#root {
+  width: 100%;
+  max-width: 400px;          /* adjust if you want wider/narrower */
+}
