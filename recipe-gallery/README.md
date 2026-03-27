@@ -1,16 +1,111 @@
-# React + Vite
+# Recipe Gallery (AD311 Assignment)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple React application that displays a gallery of recipes. It was built as part of the AD311 coursework to demonstrate component creation, props usage, list rendering, and basic testing with normal and edge-case data.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📂 Project Structure
 
-## React Compiler
+recipe-gallery/
+src/
+App.jsx
+RecipeGallery.jsx
+edgeCases.js   ← stored here for assignment testing
+main.jsx
+index.html
+package.json
+vite.config.js
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🥗 Features
+
+- Displays a gallery of recipe cards  
+- Each card shows:
+  - Recipe title  
+  - Ingredients list  
+  - Image  
+- Clean, centered layout  
+- Easy to swap between normal and edge-case test data during the assignment video  
+
+---
+
+## 🧪 Test Cases (Required by Assignment)
+
+### ✅ Normal Test Cases (3)
+These are hard‑coded directly inside `RecipeGallery.jsx`:
+
+- Valid title  
+- Valid ingredients list  
+- Valid image URL  
+
+### ⚠️ Edge Cases (3)
+Stored in GitHub inside:
+
+src/edgeCases.js
+
+
+Edge cases include:
+
+- Missing title  
+- Empty ingredients list  
+- Broken image URL  
+
+During the video demonstration, these are copied from GitHub and pasted into `RecipeGallery.jsx` to show how the component behaves with imperfect data.
+
+---
+
+## ▶️ Running the Project
+
+Install dependencies:
+
+```bash
+npm install
+
+Start the development server:
+
+npm run dev
+
+The app will be available at:
+
+http://localhost:5173
+
+🎥 Video Demonstration Requirements
+The assignment video includes:
+
+Showing the normal test cases running in the browser
+
+Opening GitHub → navigating to edgeCases.js
+
+Copying the edge-case array
+
+Replacing the normal array in RecipeGallery.jsx
+
+Saving → React refreshes → edge cases appear
+
+Explaining:
+
+Missing title
+
+Empty ingredients
+
+Broken image
+
+Discussing time/space complexity (O(n))
+
+🧠 Complexity Analysis
+Time Complexity: O(n) — the component maps through the recipe list once
+
+Space Complexity: O(n) — storing the recipe array in memory
+
+📄 Notes
+This project uses Vite for fast development
+
+Images use https://picsum.photos for simple placeholder photos
+
+Edge cases are intentionally imperfect to satisfy assignment requirements
+
+✔️ Author
+David Davis
+North Seattle College — AD311
